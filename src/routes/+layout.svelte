@@ -39,7 +39,7 @@
 </script>
 
 <svelte:head>
-    <title>Starter Project</title>
+    <title>ponderif</title>
 </svelte:head>
 
 <Toaster />
@@ -49,12 +49,12 @@
             <img
                 src="/images/logo.png"
                 class="mr-3 h-6 sm:h-9"
-                alt="Starter Project Logo"
+                alt="ponderif Logo"
             />
             <span
                 class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
             >
-                Starter Project
+                ponderif
             </span>
         </NavBrand>
         <div class="flex md:order-2">

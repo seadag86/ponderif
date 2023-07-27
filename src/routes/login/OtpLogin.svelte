@@ -2,9 +2,9 @@
     import { Card, Button } from 'flowbite-svelte';
     import { superForm } from 'sveltekit-superforms/client';
     import type { SuperValidated } from 'sveltekit-superforms';
-    import type { OtpSchema } from '$lib/schemas';
+    import type { OtpLoginSchema } from '$lib/schemas';
 
-    export let data: SuperValidated<OtpSchema>;
+    export let data: SuperValidated<OtpLoginSchema>;
     let emailSent = false;
 
     const { form, errors, enhance } = superForm(data, {
@@ -51,7 +51,7 @@
         <h3 class="text-center">Please Verify Your Email</h3>
         <p class="text-center">
             Once you have verified your email address you can get started using
-            Starter Project
+            ponderif
         </p>
     {/if}
 </Card>
