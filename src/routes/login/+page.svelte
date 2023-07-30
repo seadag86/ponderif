@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import OtpLogin from './OtpLogin.svelte';
-    import PasswordLogin from './PasswordLogin.svelte';
     import SocialLogin from './SocialLogin.svelte';
 
     export let data: PageData;
@@ -9,8 +8,6 @@
 
 <div class="py-20">
     <div class="flex w-full flex-col items-center">
-        <PasswordLogin data={data.passwordLoginForm} />
-
         <OtpLogin data={data.otpLoginForm} />
 
         <SocialLogin />

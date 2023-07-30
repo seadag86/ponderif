@@ -1,21 +1,19 @@
 <script lang="ts">
-    import { Card, Button } from 'flowbite-svelte';
     import { enhance } from '$app/forms';
 </script>
 
 <div class="max-w-2xl text-center mt-12">
     <h1 class="text-4xl font-semibold">Login with Social Provider</h1>
 </div>
-<Card class="mt-6 w-full" padding="xl" size="md">
+<div class="mt-6 p-6 w-full">
     <div class="flex items-center justify-center gap-4">
         <form method="POST" action="?/loginGoogle" use:enhance>
-            <Button type="submit" color="light">
+            <button type="submit" color="light">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
                     height="25"
                     viewBox="0 0 186.69 190.5"
-                    xmlns:v="https://vecta.io/nano"
                 >
                     <g transform="translate(1184.583 765.171)">
                         <path
@@ -45,41 +43,7 @@
                     </g>
                 </svg>
                 <div class="ml-4">Google</div>
-            </Button>
-        </form>
-        <form method="POST" action="?/loginTwitter" use:enhance>
-            <Button type="submit" color="light">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    xml:space="preserve"
-                    width="23"
-                    height="25"
-                    viewBox="0 0 248 204"
-                >
-                    <path
-                        fill="#1d9bf0"
-                        d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z"
-                    />
-                </svg>
-                <div class="ml-3">Twitter</div>
-            </Button>
-        </form>
-        <form method="POST" action="?/loginFacebook" use:enhance>
-            <Button type="submit" color="light">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="23"
-                    height="23"
-                    viewBox="0 0 14222 14222"
-                >
-                    <circle cx="7111" cy="7112" r="7111" fill="#1977f3" />
-                    <path
-                        d="M9879 9168l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4969c362 57 733 86 1111 86s749-30 1111-86V9168z"
-                        fill="#fff"
-                    />
-                </svg>
-                <div class="ml-4">Facebook</div>
-            </Button>
+            </button>
         </form>
     </div>
-</Card>
+</div>

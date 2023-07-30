@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Card, Button } from 'flowbite-svelte';
     import { superForm } from 'sveltekit-superforms/client';
     import type { SuperValidated } from 'sveltekit-superforms';
     import type { OtpLoginSchema } from '$lib/schemas';
@@ -20,7 +19,8 @@
 <div class="max-w-2xl text-center mt-12">
     <h1 class="text-4xl font-semibold">Login with One Time Password</h1>
 </div>
-<Card class="mt-6 w-full" padding="xl" size="md">
+
+<div class="card mt-6 w-full">
     {#if !emailSent}
         <form
             class="flex flex-col space-y-6"
@@ -43,7 +43,7 @@
                 {/if}
             </label>
 
-            <Button type="submit" class="w-full">Login</Button>
+            <button type="submit" class="w-full">Login</button>
         </form>
     {/if}
 
@@ -54,4 +54,4 @@
             ponderif
         </p>
     {/if}
-</Card>
+</div>
