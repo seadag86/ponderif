@@ -1,6 +1,5 @@
 <script lang="ts">
     import { User } from 'lucide-svelte';
-    import { Button } from 'flowbite-svelte';
     import type { SuperValidated } from 'sveltekit-superforms';
     import type { ProfileSchema } from '$lib/schemas';
 
@@ -30,6 +29,6 @@
                 </div>
             {/if}
         </label>
-        <Button type="submit" class="mt-4">Update Details</Button>
+        <button type="submit" class="mt-4">Update Details</button>
     </form>
 </section>

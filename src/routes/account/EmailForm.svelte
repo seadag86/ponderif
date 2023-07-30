@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Mail } from 'lucide-svelte';
-    import { Button } from 'flowbite-svelte';
     import type { SuperValidated } from 'sveltekit-superforms';
     import type { EmailSchema } from '$lib/schemas';
 
@@ -30,6 +29,6 @@
                 </div>
             {/if}
         </label>
-        <Button type="submit" class="mt-4">Update Email</Button>
+        <button type="submit" class="mt-4">Update Email</button>
     </form>
 </section>

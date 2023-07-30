@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Card, Button } from 'flowbite-svelte';
     import { superForm } from 'sveltekit-superforms/client';
     import type { PageData } from './$types';
 
@@ -14,7 +13,7 @@
         <div class="max-w-2xl text-center">
             <h1 class="text-4xl font-semibold">Register for an account</h1>
         </div>
-        <Card class="mt-6 w-full" padding="xl" size="md">
+        <div class="mt-6 w-full">
             <form class="flex flex-col space-y-6" method="POST" use:enhance>
                 {#if $errors._errors}
                     <div class="block text-red-600 dark:text-red-500">
@@ -70,7 +69,7 @@
                         </div>
                     {/if}
                 </label>
-                <Button type="submit" class="w-full">Register</Button>
+                <button type="submit" class="w-full">Register</button>
                 <div
                     class="text-sm font-medium text-gray-500 dark:text-gray-300"
                 >
@@ -81,6 +80,6 @@
                     >
                 </div>
             </form>
-        </Card>
+        </div>
     </div>
 </div>

@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Rocket } from 'lucide-svelte';
-    import { Button } from 'flowbite-svelte';
     import ProfileForm from './ProfileForm.svelte';
     import EmailForm from './EmailForm.svelte';
     import PasswordForm from './PasswordForm.svelte';
@@ -33,7 +32,7 @@
                 <div>
                     Current Plan: <strong>Free</strong>
                 </div>
-                <Button class="mt-4">Manage Billing</Button>
+                <button class="mt-4">Manage Billing</button>
             </div>
         </section>
 
