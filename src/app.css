@@ -1,23 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --background: #f5f5f5;
     --foreground: #333;
+    --primary-50: #f1f8f2;
+    --primary-100: #dcefde;
+    --primary-200: #bcdec2;
+    --primary-300: #90c59d;
+    --primary-400: #60a773;
+    --primary-500: #489d62;
+    --primary-600: #2d6e42;
+    --primary-700: #245836;
+    --primary-800: #1f462d;
+    --primary-900: #1a3a26;
+    --primary-950: #0e2015;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: rgb(17, 24, 39);
+        --background: #222;
         --foreground: #fff;
     }
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf');
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+    font-family: 'Optima';
+    src: url('/fonts/Optima.ttf');
+}
 
 html,
 body {
@@ -37,14 +53,17 @@ h6 {
 
 h1 {
     @apply text-5xl;
+    font-family: 'Optima', sans-serif;
 }
 
 h2 {
     @apply text-4xl;
+    font-family: 'Optima', sans-serif;
 }
 
 h3 {
     @apply text-3xl;
+    font-family: 'Optima', sans-serif;
 }
 
 h4 {
@@ -60,7 +79,7 @@ h6 {
 }
 
 p a {
-    @apply font-medium text-blue-600 underline hover:text-blue-700 hover:no-underline dark:text-blue-500 dark:hover:text-blue-600;
+    @apply font-medium text-primary-600 underline hover:text-primary-700 hover:no-underline dark:text-primary-500 dark:hover:text-primary-600;
 }
 
 p strong {
@@ -75,5 +94,14 @@ input[type='text'],
 input[type='number'],
 input[type='email'],
 input[type='password'] {
-    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 !important;
+    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 dark:bg-zinc-900 dark:border-zinc-600 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500;
+}
+
+.card {
+    @apply bg-white dark:bg-zinc-950 dark:border-x-zinc-600;
+}
+
+button,
+input[type='button'] input[type='submit'] {
+    @apply bg-white dark:bg-zinc-900 dark:border-zinc-600;
 }
