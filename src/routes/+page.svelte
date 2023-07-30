@@ -1,20 +1,32 @@
 <script lang="ts">
-    import { Button } from 'flowbite-svelte';
+    let tab = 'For You';
 </script>
 
-<div class="py-20">
-    <div class="mx-auto mb-10 max-w-2xl text-center">
-        <h1 class="mb-6 text-5xl sm:text-6xl">A Modern Project Template</h1>
-        <p class="text-lg">
-            Improve your development productivity with a Svelte Kit project
-            template that includes Supabase, Taailwind and SuperForms all wired
-            up from the get-go!
-        </p>
-    </div>
-    <div class="flex items-center justify-center gap-3">
-        <Button href="/" size="lg">
-            <span class="text-foreground">Get Started</span>
-        </Button>
-        <Button href="/" color="light" size="lg">Learn More</Button>
-    </div>
-</div>
+<article class="w-full">
+    <header class="w-full">
+        <div class="w-full flex items-center justify-stretch pt-3 gap-4">
+            <button
+                type="button"
+                class="tab flex-grow"
+                class:active={tab === 'For You'}
+                on:click={() => (tab = 'For You')}
+            >
+                For You
+            </button>
+            <button
+                type="button"
+                class="tab flex-grow"
+                class:active={tab === 'Following'}
+                on:click={() => (tab = 'Following')}
+            >
+                Following
+            </button>
+        </div>
+        <div
+            class="w-full flex items-center justify-stretch gap-4 border-b border-b-zinc-700"
+        >
+            <div class="tab-separator" class:active={tab === 'For You'} />
+            <div class="tab-separator" class:active={tab === 'Following'} />
+        </div>
+    </header>
+</article>

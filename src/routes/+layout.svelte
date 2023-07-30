@@ -3,7 +3,8 @@
     import { onMount } from 'svelte';
     import { invalidate } from '$app/navigation';
     import { Toaster } from 'svelte-french-toast';
-    import Nav from '$lib/components/Nav.svelte';
+    import Nav from './Nav.svelte';
+    import Sidebar from './Sidebar.svelte';
     import type { LayoutData } from './$types';
 
     export let data: LayoutData;
@@ -31,11 +32,13 @@
 
 <Toaster />
 <div>
-    <div class="container mx-auto flex">
+    <div class="container mx-auto flex gap-6">
         <Nav />
 
-        <main class="w-full flex-grow bg-black/50">
+        <main class="flex justify-stretch flex-grow gap-5 w-full">
             <slot />
         </main>
+
+        <Sidebar />
     </div>
 </div>
